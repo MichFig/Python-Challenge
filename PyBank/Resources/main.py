@@ -28,11 +28,8 @@ start_date = datetime.datetime(2009,12, 31)
 num_months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
 print (f"Total Months: {num_months}")
 # find the net total of profit and loss
-#Import Fin file
-with open('budget_data.csv') as fin:
-    headerline = fin.next()
-    total = 0
-    for row in csv.reader(fin):
-        total += int(row[1])
-print (f"Total Months: {total}")    
+
+  
+
+
 
