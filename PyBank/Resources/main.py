@@ -20,4 +20,7 @@ with open(csvpath) as csvfile:
     # Read each row of data after the header
     for row in csvreader:
         print(row)
-end_date = datetime.datetime()
+# get the start date in the data set
+import datetime
+x = datetime.datetime.now()
+print (x)
