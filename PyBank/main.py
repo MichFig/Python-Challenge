@@ -10,7 +10,7 @@ csvpath = os.path.join('budget_data.csv')
 #     print(lines)
 #     print(type(lines))
 # Method 2: Improved Reading using CSV module
-with open(csvpath) as csvfile:
+with open('budget_data.csv') as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
     print(csvreader)
