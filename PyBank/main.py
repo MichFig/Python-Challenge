@@ -1,25 +1,16 @@
-# import the os module
-# This will allow us to create file paths across operating systems
+#import budget data 
 import os
-# Module for reading CSV files
-import csv
-csvpath = os.path.join('budget_data.csv')
-# # Method 1: Plain Reading of CSV files
-# with open(csvpath, ‘r’) as file_handler:
-#     lines = file_handler.read()
-#     print(lines)
-#     print(type(lines))
-# Method 2: Improved Reading using CSV module
-with open('budget_data.csv') as csvfile:
-    # CSV reader specifies delimiter and variable that holds contents
+import csv 
+#working directory
+
+csvpath=os.path.join('..','Resources','budget_data.csv')
+with open(csvpath, newline='') as csvfile:
     csvreader = csv.reader(csvfile, delimiter=',')
     print(csvreader)
-    # Read the header row first (skip this step if there is now header)
     csv_header = next(csvreader)
-    print(f"CSV Header: {csv_header}")
-    # Read each row of data after the header
-    for row in csvreader:
-        print(row)
-
-
-
+    month = []
+    revenue = []
+    revenue_change = []
+    monthly_change = []
+    
+    print(f"Header: {csv_header}")    
