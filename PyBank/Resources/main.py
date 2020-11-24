@@ -29,22 +29,3 @@ num_months = (end_date.year - start_date.year) * 12 + (end_date.month - start_da
 print (f"Total Months: {num_months}")
 print (f"Total: ${total_revenue}")
 # Find the Revenue change per month
-previous_revenue = 0
-revenue_change = 0
-revenue_change_list = []
-revenue_change = int(row[1]) - previous_revenue
-prvious_revenue = int(row[1])
-revenue_change_list = revenue_change_list + [revenue_change]
-month_of_change = 0
-month_of_change += month
-# Find Revenue Change Percentages
-biggest_increase = []
-biggest_decrease = []
-if revenue_change>biggest_increase[1]:
-    biggest_incr[1]= revenue_change
-biggest_incr[0] = row['Date']
-#The greatest decrease in revenue (date and amount) over the entire period
-if revenue_change<biggest_decrease[1]:
-    biggest_decr[1]= revenue_change
-biggest_decr[0] = row['Date']
-revenue_avarage = sum(revenue_change_list)/len(revenue_change_list)
