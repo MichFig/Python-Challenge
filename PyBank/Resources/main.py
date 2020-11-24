@@ -5,7 +5,7 @@ import os
 import csv
 import datetime
 csvpath = os.path.join('budget_data.csv')
-total_pl =0
+total_revenue =0
 # Method 2: Improved Reading using CSV module
 with open(csvpath) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
@@ -17,14 +17,34 @@ with open(csvpath) as csvfile:
     # Read each row of data after the header
     for row in csvreader:
         print(row)
-        montht = row[0]
-        profit_loss = int(row[1])
-        total_pl += profit_loss
+        month = row[0]
+        revenue = int(row[1])
+        total_revenue += int(row[1])
+        
 # set the dates to find the total number of months in the dataset
 import datetime
 end_date = datetime.datetime(2017,2,28)
 start_date = datetime.datetime(2009,12, 31)
 num_months = (end_date.year - start_date.year) * 12 + (end_date.month - start_date.month)
 print (f"Total Months: {num_months}")
-print (f"Total: ${total_pl}")
-
+print (f"Total: ${total_revenue}")
+# Find the Revenue change per month
+previous_revenue = 0
+revenue_change = 0
+revenue_change_list = []
+revenue_change = int(row[1]) - previous_revenue
+prvious_revenue = int(row[1])
+revenue_change_list = revenue_change_list + [revenue_change]
+month_of_change = 0
+month_of_change += month
+# Find Revenue Change Percentages
+biggest_increase = []
+biggest_decrease = []
+if revenue_change>biggest_increase[1]:
+    biggest_incr[1]= revenue_change
+biggest_incr[0] = row['Date']
+#The greatest decrease in revenue (date and amount) over the entire period
+if revenue_change<biggest_decrease[1]:
+    biggest_decr[1]= revenue_change
+biggest_decr[0] = row['Date']
+revenue_avarage = sum(revenue_change_list)/len(revenue_change_list)
