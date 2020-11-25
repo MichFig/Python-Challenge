@@ -3,7 +3,6 @@
 import os
 # Module for reading CSV files
 import csv
-import datetime
 csvpath = os.path.join('election_data_csv')
 total_revenue =0
 # Method 2: Improved Reading using CSV module
