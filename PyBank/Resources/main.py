@@ -38,16 +38,9 @@ with open(csvpath) as csvfile:
         print(f"Net Change: {net_change}")
         previous_row_revenue = revenue
         sum_net_change += net_change
-        if net_change > greatest_increase:
-			greatest_increase_month = month
-			greatest_increase = revenue
-        if net_change < greatest_decrease:
-			greatest_decrease_month = month
-			greatest_decrease = revenue
-average_change = sum_net_change / (total_months -1)
+        average_change = sum_net_change / (total_months -1)
 # Print total months and print total revenue
 print (f"Total Months: {total_months}")
 print (f"Total: ${total_revenue}")
-
 print('Average Change: $%3.2f' % average_change)
 
