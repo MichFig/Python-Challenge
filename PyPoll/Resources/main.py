@@ -3,8 +3,7 @@
 import os
 # Module for reading CSV files
 import csv
-csvpath = os.path.join('election_data_csv')
-total_revenue =0
+csvpath = os.path.join('election_data.csv')
 # Method 2: Improved Reading using CSV module
 with open(csvpath) as csvfile:
     # CSV reader specifies delimiter and variable that holds contents
@@ -14,3 +13,9 @@ with open(csvpath) as csvfile:
     csv_header = next(csvreader)
     print(f"CSV Header: {csv_header}")
     # Read each row of data after the header
+    for row in csvreader:
+        id = int(row[0])
+        county = row[1]
+        canditate = row[2]
+print(len('election_data.csv'))   
+       
