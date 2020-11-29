@@ -10,6 +10,7 @@ total_revenue = 0
 sum_net_change = 0
 greatest_increase = 0
 greatest_decrease = 0
+array_net_changes =[]
 
 # Method 2: Improved Reading using CSV module
 with open(csvpath) as csvfile:
@@ -31,6 +32,7 @@ with open(csvpath) as csvfile:
         total_months += 1
         total_revenue += revenue
         net_change = revenue - previous_row_revenue
+        
         previous_row_revenue = revenue
         sum_net_change += net_change
         average_change = sum_net_change / (total_months -1)
