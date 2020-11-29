@@ -61,6 +61,3 @@ print("O'Tooley: %3.3f" % OP,  OTooley_votes )
 print(f"Winner: {winner}")
 
 #print to file
-file = open("analysis.txt", "w")
-print("hello")
-file.close()
